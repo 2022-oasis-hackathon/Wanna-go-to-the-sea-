@@ -140,7 +140,7 @@ db.sqlite3-journal
 media
 
 
-#정적 파일들 ignore 처리해버리기
+#정적 파일들 ignore 처리해버리기 -> 나중에 필요없는 정적파일 넣기
 #images/
 #jquery.mobile-1.4.5.min.css
 #jquery-1.11.1.min.js
