@@ -56,7 +56,8 @@ $ yarn start or npm run start
  샘플 에디터 [https://stackedit.io/app#](https://stackedit.io/app#)
  
 ## 팀 정보 (Team Information)
-- jeong ji hun (wlgns2234@naver.com), Github Id: 
+- jeong ji hun (wlgns2234@naver.com), Github Id:jihunJeong 
+- lee jun hyeok (ly0609@naver.com), Github Id:ly0609
 
 ## 저작권 및 사용권 정보 (Copyleft / End User License)
  * [MIT](https://github.com/osam2020-WEB/Sample-ProjectName-TeamName/blob/master/license.md)
