@@ -1,6 +1,10 @@
 from django.urls import path
 from . import views
 
+# register the app namespace
+# URL NAMES
+app_name = 'my_app'
+
 urlpatterns = [
     path('', views.mainpage, name ='mainpage'),
     path('page1/', views.page1, name ='page1'),
