@@ -6,3 +6,36 @@ img{
     width: 600px;
     height: 300;
 }
+
+
+body{
+    margin: 0;
+}
+
+
+#nav{
+    list-style:none;
+    height: 40px;
+    padding: 5px 1px;
+    margin: 0;
+    background: black;
+}
+
+#nav li{
+    float: left;
+    position: relative;
+    margin: 5px 30px;
+    padding: 0;
+}
+
+#nav li a{
+    display: block;
+    font-family: "맑은고딕";
+    font-weight: bold;
+    color: white;
+    font-size: 18px;
+    padding:7px 8px;
+    margin: 0;
+    text-decoration: none;
+    text-shadow: 0 1px 1px; rgba(0,0,0,0.3)
+}
