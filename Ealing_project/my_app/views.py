@@ -5,6 +5,7 @@ from . import models
 def mainpage(request):  
     if request.method == 'GET':
         products = models.house.objects.all()
+
         context = {
             'region1' : products[:5],
             'region2' : products[5:10],
