@@ -9,19 +9,47 @@
     <title>일링</title>
 </head>
 <body>
+    <div id="wrap">
+        <header>
+            <div class="h_top">
+                <div class="wrap">
+                    <div class="logo">
+                        <a href="#"><img src="./image/logo.png" alt="logo"></a>
+                    </div>
+                    <div class="search">
+                        <form action="" method="post">
+                            <div class="search_icon">
+                                <button type="submit"><img src="./icon/search.png" alt=""></button>
+                            </div>
+                            <input type="text" id="search" placeholder="검색어를 입력하세요.">
+                        </form>
+                    </div>
+                    <div class="mypage">
+                        <a href="#"><img class="h_icon" src="./icon/user.png" alt=""></a>
+                        <a href="#">
+                            <p>마이페이지</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap">
+                <ul class="h_menu">
+                    <li><a href="#"><img src="./icon/menu1.png" alt="">HOME</a></li>
+                    <li><a href="#"><img src="./icon/menu2.png" alt="">산</a></li>
+                    <li><a href="#"><img src="./icon/menu3.png" alt="">들</a></li>
+                    <li><a href="#"><img src="./icon/menu4.png" alt="">바다</a></li>
+                    <li><a href="#">체험하기</a></li>
+                    <li><a href="#">스팟지도</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                </ul>
+            </div>
+        </header>
 
-    <div>
-        <ul id="nav">
-            <li><a href="{% url 'my_app:mainpage' %}">mainpage</a></li>
-            <li><a href="{% url 'my_app:page1' %}">page1</a></li>
-            <li><a href="{% url 'my_app:page2' %}">page2</a></li>
-            <li><a href="{% url 'my_app:page3' %}">page3</a></li>
-        </ul>  
-    </div>
-    
-    {% block content %}
 
-    {% endblock %}
-    
+
+        {% block content %}
+
+        {% endblock %}
+    </div>   
 </body>
 </html>
