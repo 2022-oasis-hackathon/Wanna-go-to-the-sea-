@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from models import Item
+from .models import *
 
 # Create your views here.
 def mainpage(request):
