@@ -21,6 +21,7 @@ def mainpage(request):
 def page1(request): 
     return render(request, 'my_app/page1.html')
 
+
 #체험
 def page2(request):
     if request.method == 'GET':
@@ -33,6 +34,12 @@ def page2(request):
 
         return render(request, 'my_app/page2.html', context = context)
 
+
 #스팟
 def page3(request):
-    return render(request, 'my_app/page3.html')
+    if request.method == 'GET':
+        place = models.recommend_place.objects.all()
+
+        context = {'place' : place}
+
+        return render(request, 'my_app/page3.html', context = context)

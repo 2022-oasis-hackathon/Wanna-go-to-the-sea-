@@ -3,10 +3,68 @@
 
 {% block content %}
 
-<div class = "myform">
-    <h1>예시 페이지3 입니다</h1>
-    <img src="{% static 'my_app/images/oasis.png' %}" alt = 'my_image'>
+<main>
+    {% for p in place %}
+    <div class="inner_wrap2">
+        <div class="titles">내 주변 추천스팟</div>
+        <span class="sub_title">내 위치 : 전라남도 순천시 국가정원길 123</span>
+        <div class="map"><img src="/static/my_app/images/map_1.png" alt=""></div>
+        <div class="profile">
+            <div class="profile_text">
+                <div class="text_title">
+                    <h3>{{p.name}}</h3>
+                    <div class="grade">
+                        <img src="./icon/star.png" alt="">
+                        <span> {{p.reputation}} </span>
+                    </div>
+                </div>
+                <span>{{p.tpye}}</span>
+                <p>{{p.address}</p>
+            </div>
+            <div class="profile_img">
+                <img src="{{ p.profile_img }}" alt="">
+            </div>
+        </div>
+        <div class="sub_list">
+            <div class="sub_small2">
+                <img src="{{ p.img1 }}" alt="">
+                <img src="{{ p.img2 }}" alt="">
+                <img src="{{ p.img3 }}" alt="">
+                <img src="{{ p.img4 }}" alt="">
+            </div>
+            <div class="sub_big">
+                <img src="{{ p.img_big }}" alt="">
+            </div>
+        </div>
+        <div class="map_bottom">
+            <h3 class="titles">{{p.title}}</h3>
+            <p>{{p.content}}</p>
+            <div class="list_text">
+                <div class="text">
+                    <div class="titles">{{p.small_title1}}</div>
+                    <p>{{p.small_content1}}</p>
+                </div>
+                <div class="text">
+                    <div class="titles">{{p.small_title2}}</div>
+                    <p>{{p.small_content2}}</p>
+                </div>
+                <div class="text">
+                    <div class="titles">추천코스</div>
+                    <img src="{{p.recommend_load_img}}"" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</main>
+<footer>
+    <div class="footer_top"></div>
+    <div class="footer_bottom"></div>
+</footer>
 </div>
+</body>
+
+</html>
 
 
 {% endblock %}
