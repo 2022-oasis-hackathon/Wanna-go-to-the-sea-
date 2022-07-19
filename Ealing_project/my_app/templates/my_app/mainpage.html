@@ -6,18 +6,22 @@
 
 <main>
     <div class="banner">
-        <img class="bg" src="./image/banner.png" alt="">
+        <img class="bg" src="{% static 'my_app/images/banner.png' %}" alt="">
         <h3 class="banner_text">일링:일과 힐링을 함께</h3>
         <div class="banner_btn">
-            <img src="./icon/banner_arr.png" alt="">
+            <img src="{% static 'my_app/icon/banner_arr.png' %}" alt="">
 
         </div>
     </div>
+
+    <!-- 서브 이름 -->
+
     <div class="con1 inner_wrap">
         <h3 class="title">지역별 힐링 하우스</h3>
 
+        <!-- 지역별 힐링하우스 -->
         <div class="list_box">
-            {% for p in products %}
+            {% for p in region1 %}
             <div class="box">
                 <div class="box_img">
                     <a href="#">
@@ -42,8 +46,94 @@
             {% endfor %}
         </div>
 
+        <div class="list_box">
+            {% for p in region2 %}
+            <div class="box">
+                <div class="box_img">
+                    <a href="#">
+                        <img class="main_img" src="./image/list1.png" alt="">
+                    </a>
+                    <img class="heart" src="{% static 'my_app/icon/heart_black.png' %}" alt="">
+                </div>
+                <a href="#">
+                    <div class="box_text">
+                        <div class="text_title">
+                            <h5> {{p.name}} </h5>
+                            <div class="grade">
+                                <img src="{% static 'my_app/icon/star.png' %}" alt="">
+                                <span>4.96</span>
+                            </div>
+                        </div>
+                        <p>{{p.content}}</p>
+                        <p>{{p.price}} / 박</p>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+
+        <a class="list_btn" href="#">더보기</a>
+    </div>
+
+    <!-- 서브 이름 -->
+    <div class="con2 inner_wrap">
+        <h3 class="title">추천체험</h3>
+
+        <!-- 추천체험 -->
+        <div class="list_box">
+            {% for p in recommendation1 %}
+            <div class="box">
+                <div class="box_img">
+                    <a href="#">
+                        <img class="main_img" src="./image/list1.png" alt="">
+                    </a>
+                    <img class="heart" src="{% static 'my_app/icon/heart_black.png' %}" alt="">
+                </div>
+                <a href="#">
+                    <div class="box_text">
+                        <div class="text_title">
+                            <h5> {{p.name}} </h5>
+                            <div class="grade">
+                                <img src="{% static 'my_app/icon/star.png' %}" alt="">
+                                <span>4.96</span>
+                            </div>
+                        </div>
+                        <p>{{p.content}}</p>
+                        <p>{{p.price}} / 박</p>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="list_box">
+            {% for p in recommendation2 %}
+            <div class="box">
+                <div class="box_img">
+                    <a href="#">
+                        <img class="main_img" src="./image/list1.png" alt="">
+                    </a>
+                    <img class="heart" src="{% static 'my_app/icon/heart_black.png' %}" alt="">
+                </div>
+                <a href="#">
+                    <div class="box_text">
+                        <div class="text_title">
+                            <h5> {{p.name}} </h5>
+                            <div class="grade">
+                                <img src="{% static 'my_app/icon/star.png' %}" alt="">
+                                <span>4.96</span>
+                            </div>
+                        </div>
+                        <p>{{p.content}}</p>
+                        <p>{{p.price}} / 박</p>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+
+        <a class="list_btn" href="#">더보기</a>
     </div>
 </main>
 
 {% endblock %}
-

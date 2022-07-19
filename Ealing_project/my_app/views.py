@@ -5,7 +5,13 @@ from . import models
 def mainpage(request):  
     if request.method == 'GET':
         products = models.house.objects.all()
-        context = {'products' : products}
+        context = {
+            'region1' : products[:5],
+            'region2' : products[5:10],
+            'recommendation1' : products[10:15],
+            'recommendation2' : products[15:20]
+        }
+
         return render(request, 'my_app/mainpage.html', context = context)
     
     #return render(request, 'my_app/mainpage.html')
