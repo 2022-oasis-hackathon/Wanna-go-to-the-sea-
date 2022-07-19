@@ -18,12 +18,9 @@ def mainpage(request):
     #return render(request, 'my_app/mainpage.html')
     
 
-def page1(request): 
-    return render(request, 'my_app/page1.html')
-
 
 #체험
-def page2(request):
+def experience(request):
     if request.method == 'GET':
         products = models.house.objects.all()
 
@@ -32,14 +29,23 @@ def page2(request):
             'recommendation2' : products[15:20]
         }
 
-        return render(request, 'my_app/page2.html', context = context)
+        return render(request, 'my_app/experience.html', context = context)
 
 
 #스팟
-def page3(request):
+def spotmap(request):
     if request.method == 'GET':
         place = models.recommend_place.objects.all()
 
         context = {'place' : place}
 
-        return render(request, 'my_app/page3.html', context = context)
+        return render(request, 'my_app/spotmap.html', context = context)
+
+
+
+def detail(request, topic):
+    if request.method == 'GET':
+        #place = models.recommend_place.objects.all()
+    
+        context = {'topic' : topic}
+        return render(request, 'my_app/detail.html',context = context )
