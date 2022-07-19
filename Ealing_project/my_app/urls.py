@@ -9,5 +9,6 @@ urlpatterns = [
     path('', views.mainpage, name ='mainpage'),
     path('experience/', views.experience, name ='experience'),
     path('spotmap/', views.spotmap, name ='spotmap'),
-    path('<topic>', views.detail),
+    path('<topic>', views.detail, name = 'detail'),
+    path('ex_detail/', views.ex_detail, name ='ex_detail'),
 ]

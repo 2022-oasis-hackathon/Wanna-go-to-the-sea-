@@ -47,7 +47,7 @@ class region_detail_page(models.Model):
     img2 = models.TextField() # 작은이미지 주소
     img3 = models.TextField() # 작은이미지 주소
     img4 = models.TextField() # 작은이미지 주소
-    img_big = models.TextField() # 작은이미지 주소
+    img_big = models.TextField() # 큰이미지 주소
     
     profile_img = models.TextField() # 프로필이미지 주소
 
@@ -63,3 +63,25 @@ class region_detail_page(models.Model):
 
     def __str__(self):
         return f"{self.region_name} 상세페이지"
+
+
+class experience_detail_page(models.Model):
+    
+    img1 = models.TextField() # 작은이미지 주소
+    img2 = models.TextField() # 작은이미지 주소
+    img3 = models.TextField() # 작은이미지 주소
+    img4 = models.TextField() # 작은이미지 주소
+    img_big = models.TextField() # 큰 이미지 주소
+    
+    region_name = models.CharField(max_length=20) # 지역 이름(ex 전라남도 장성)
+    price = models.CharField(max_length=20) # 가격
+
+    title = models.CharField(max_length=30) 
+    content = models.CharField(max_length=500) 
+    small_title1 = models.CharField(max_length=30) 
+    small_content1 = models.CharField(max_length=500) 
+    small_title2 = models.CharField(max_length=30) 
+    small_content2 = models.CharField(max_length=500)
+
+    def __str__(self):
+        return f"{self.region_name} 체험 상세페이지"

@@ -42,3 +42,8 @@ def detail(request, topic):
             detail = models.region_detail_page.objects.all()
             context = {'detail' : detail, 'topic' : topic}
             return render(request, 'my_app/detail.html',context = context )
+
+
+def ex_detail(request):
+    if request.method == 'GET':
+        return render(request, 'my_app/ex_detail.html')

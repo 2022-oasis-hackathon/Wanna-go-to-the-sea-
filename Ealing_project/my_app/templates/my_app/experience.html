@@ -22,7 +22,7 @@
             {% for p in recommendation1 %}
             <div class="box">
                 <div class="box_img">
-                    <a href="#">
+                    <a href="{% url 'my_app:ex_detail' %}">
                         <img class="main_img" src="{{ p.profile_img }}" alt="">
                     </a>
                     <img class="heart" src="{% static 'my_app/icon/heart_black.png' %}" alt="">
@@ -48,7 +48,7 @@
             {% for p in recommendation2 %}
             <div class="box">
                 <div class="box_img">
-                    <a href="#">
+                    <a href="{% url 'my_app:ex_detail' %}">
                         <img class="main_img" src="{{ p.profile_img }}" alt="">
                     </a>
                     <img class="heart" src="{% static 'my_app/icon/heart_black.png' %}" alt="">
