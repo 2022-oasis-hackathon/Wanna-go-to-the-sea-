@@ -1,11 +1,11 @@
 from django.shortcuts import render
-from .models import *
+from . import models
 
 # Create your views here.
 def mainpage(request):
     '''
     if request.method == 'GET':
-        products = Item.objects.all()
+        products = models.house.objects.all()
         context = {'products' : products}    
         return render(request, 'my_app/mainpage.html', context)
     '''
