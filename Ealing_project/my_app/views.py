@@ -2,14 +2,13 @@ from django.shortcuts import render
 from . import models
 
 # Create your views here.
-def mainpage(request):
-    '''
+def mainpage(request):  
     if request.method == 'GET':
         products = models.house.objects.all()
-        context = {'products' : products}    
-        return render(request, 'my_app/mainpage.html', context)
-    '''
-    return render(request, 'my_app/mainpage.html')
+        context = {'products' : products}
+        return render(request, 'my_app/mainpage.html', context = context)
+    
+    #return render(request, 'my_app/mainpage.html')
     
 
 def page1(request): 
