@@ -27,8 +27,7 @@ header {width: 100%; height: 215px; background-color: #262626;}
 #search {width: 100%; height: 100%; border: 0; outline: none; text-align: center; font-size: 18px;}
 
 .mypage {display: flex; align-items: center;}
-.h_icon {width: 35px; object-fit: cover; margin-right: 8px;}
-.mypage p {color: #fff; font-size: 18px; font-weight: bold;}
+.mypage a {color: #fff;  font-size: 18px; font-weight: bold; margin-right: 25px;}
 
 .h_menu {display: flex; justify-content: center; align-items: center;}
 .h_menu li {width: 196px; height: 100%; line-height: 78px; border-right: 1px solid #000; color: #ffffff;}
@@ -50,7 +49,7 @@ header {width: 100%; height: 215px; background-color: #262626;}
 
 .box_img {width: 295px; height: 269px; position: relative; margin-bottom: 10px;}
 .box_img img.main_img {width: 100%; height: 100%; object-fit: cover;}
-.box_img img.heart {position: absolute; top: 15px; right: 15px; z-index: 100;}
+.box_img img.heart {position: absolute; top: 15px; right: 15px; z-index: 100; cursor: pointer;}
 
 .list_box {display: flex; align-items: center; flex-wrap: wrap;}
 .box {width: 295px; height: 362px; margin-right: 43px; margin-bottom: 70px;}

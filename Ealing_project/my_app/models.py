@@ -85,3 +85,12 @@ class experience_detail_page(models.Model):
 
     def __str__(self):
         return f"{self.region_name} 체험 상세페이지"
+
+
+
+class login_data(models.Model):
+    login_id = models.TextField() # 작은이미지 주소
+    login_password = models.TextField() # 작은이미지 주소
+
+    def __str__(self):
+        return f"id : {self.login_id}, pw : {self.login_password}"

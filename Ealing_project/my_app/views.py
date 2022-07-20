@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from . import models
-from my_app.models import region_detail_page
+from my_app.models import region_detail_page, login_data
+
 
 # 홈
 def mainpage(request):  
@@ -47,3 +48,36 @@ def detail(request, topic):
 def ex_detail(request):
     if request.method == 'GET':
         return render(request, 'my_app/ex_detail.html')
+
+
+# 로그인
+def login(request):
+    if request.method == "POST":
+        username = request.POST["id"]
+        password = request.POST["pw"]
+        id_check = models.login_data.objects.all()
+
+        print(id_check[0].login_id)
+        print(username)
+        print(password)
+        check = {'id_check' : id_check}
+
+        if id_check[0].login_id == username and id_check[0].login_password == password:
+            print('로그인성공!')
+            products = models.house.objects.all()
+            context = {
+                'region1' : products[:5],
+                'region2' : products[5:10],
+                'recommendation1' : products[10:15],
+                'recommendation2' : products[15:20],
+                'nickname' : username,
+            }
+            return render(request, 'my_app/mainpage.html', context = context)
+        else:
+            return render(request, "my_app/login.html")
+
+    else:
+        return render(request, 'my_app/login.html')
+
+
+    

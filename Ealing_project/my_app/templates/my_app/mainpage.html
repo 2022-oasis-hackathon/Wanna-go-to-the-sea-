@@ -15,11 +15,10 @@
     </div>
 
     <!-- 서브 이름 -->
-
     <div class="con1 inner_wrap">
         <h3 class="title">지역별 힐링 하우스</h3>
 
-        <h1>이거 왜 안나와??</h1>
+        
         <!-- 지역별 힐링하우스 -->
         <div class="list_box">
             {% for p in region1 %}
@@ -135,6 +134,31 @@
 
         <a class="list_btn" href="#">더보기</a>
     </div>
+
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+
+        function evnet(){
+            $(document)
+            .on("click",".heart" , function(){
+
+                var color = $(this).hasClass("heart_color");
+            
+                if(color){
+                    $(this).removeClass("heart_color")
+                    $(this).attr("src","/static/my_app/icon/heart_black.png")
+                }else {
+                    $(this).addClass("heart_color")
+                    $(this).attr("src","/static/my_app/icon/heart_color.png")
+                }
+            })
+        }
+
+        $(function(){
+            evnet();
+        })
+    </script>
+
 </main>
 <footer>
     <div class="footer_top"></div>

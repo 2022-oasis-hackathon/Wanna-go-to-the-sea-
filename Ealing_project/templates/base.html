@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'my_app/css/style.css' %}">
+    <link rel="stylesheet" href="/static/my_app/css/style.css">
     <title>일링</title>
 </head>
 <body>
@@ -25,10 +25,12 @@
                         </form>
                     </div>
                     <div class="mypage">
-                        <a href="#"><img class="h_icon" src="{% static 'my_app/icon/user.png' %}" alt=""></a>
-                        <a href="#">
-                            <p>마이페이지</p>
-                        </a>
+
+                   <!-- <a href="">로그인</a>
+                        <a href="">회원가입</a> -->
+                        <a href="">{{nickname}} 님</a>
+                        <a href="">로그아웃</a>
+
                     </div>
                 </div>
             </div>
@@ -45,7 +47,8 @@
             </div>
         </header>
 
-
+        <h1>{{nickname}}test</h>
+        
 
         {% block content %}
 
