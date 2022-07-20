@@ -26,13 +26,13 @@
                     </div>
                     <div class="mypage">
                         {% if logined %}
-                        <a href="">oasis님</a>
-                        <a href="">로그아웃</a>
+                        <a href="#">oasis님</a>
+                        <a href="{% url 'my_app:login' %}">로그아웃</a>
                         {% endif %}
 
                         {% if not logined %}
-                        <a href="">로그인</a>
-                        <a href="">회원가입</a>
+                        <a href="{% url 'my_app:login' %}">로그인</a>
+                        <a href="#">회원가입</a>
                         {% endif %}
                         
                     </div>
