@@ -72,6 +72,32 @@
 
         <a class="list_btn" href="#">더보기</a>
     </div>
+
+    <!-- 하트 커버 색깔바꾸기-->
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>s
+    <script>
+
+        function evnet(){
+            $(document)
+            .on("click",".heart" , function(){
+
+                var color = $(this).hasClass("heart_color");
+            
+                if(color){
+                    $(this).removeClass("heart_color")
+                    $(this).attr("src","/static/my_app/icon/heart_black.png")
+                }else {
+                    $(this).addClass("heart_color")
+                    $(this).attr("src","/static/my_app/icon/heart_color.png")
+                }
+            })
+        }
+
+        $(function(){
+            evnet();
+        })
+    </script>
+
 </main>
 <footer>
     <div class="footer_top"></div>
