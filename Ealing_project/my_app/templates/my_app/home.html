@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <main>
+        <div class="main_banner">
+            <ul class="banner_img">
+                <li><img src="{% static 'my_app/images/bnr1.png' %}" alt=""></li>
+                <li><img src="{% static 'my_app/images/bnr2.png' %}" alt=""></li>
+                <li><img src="{% static 'my_app/images/bnr3.png' %}" alt=""></li>
+            </ul>
+            <div class="banner_txt">
+                <div class="inner_wrap2">
+                    <div>
+                        <h3>일링 : 일과 힐링을 함께</h3>
+                        <p>워케이션 추천장소 및 체험지들을 일링을 통해 알바보고 예약해요</p>
+                    </div>
+                    <img src="{% static 'my_app/images/btn.png' %}" alt="">
+                </div>
+                <div class="banner_bg"></div>
+            </div>
+        </div>
+        <div class="con2">
+            <div class="con2_1">
+                <h1>이번 워케이션에 어울리는 일링지역은?</h1>
+                <p>산, 들, 바다 등 일링에서 워케이션 장소를 탐색할 수 있어요</p>
+                <p>추천스팟기능을 사용하여 내 숙소 주변 관광지, 맛집 등도 둘러봐요</p>
+                <img class="sp1" src="{% static 'my_app/images/sp1.png' %}" alt="">
+                <img class="sp2" src="{% static 'my_app/images/sp2.png' %}" alt="">
+            </div>
+            <div class="con2_2">
+                <div>
+                    <img src="{% static 'my_app/images/sp3.png' %}" alt="">
+                    <img src="{% static 'my_app/images/sp4.png' %}" alt="">
+                </div>
+                <img src="{% static 'my_app/images/sp5.png' %}" alt="">
+            </div>
+        </div>
+        <div class="con3">
+            <h3>일링 : 워케이션의 장점은?</h3>
+            <ul class="card">
+                <li><img src="{% static 'my_app/images/circle1.png' %}" alt=""></li>
+                <li><img src="{% static 'my_app/images/circle2.png' %}" alt=""></li>
+                <li><img src="{% static 'my_app/images/circle3.png' %}" alt=""></li>
+                <li><img src="{% static 'my_app/images/circle4.png' %}" alt=""></li>
+            </ul>
+            <div class="bg3"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer_top">
+            <p>사업자 명: 일링</p>
+            <p>협찬: 오아시스 해커톤</p>
+        </div>
+        <div class="footer_bottom">
+
+            <p>Copyright 2021. 일링 Co., Ltd. all rights reserved.</p>
+        </div>
+    </footer>
+</div>
+{% endblock %}
+
+
+</body>
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+    function evnet(){
+        $(document)
+        .on("click",".heart" , function(){
+
+            var color = $(this).hasClass("heart_color");
+        
+            if(color){
+                $(this).removeClass("heart_color")
+                $(this).attr("src","/static/my_app/icon/heart_black.png")
+            }else {
+                $(this).addClass("heart_color")
+                $(this).attr("src","/static/my_app/icon/heart_color.png")
+            }
+        })
+    }
+
+    $(function(){
+        evnet();
+    })
+</script>
+</html>

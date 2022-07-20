@@ -23,6 +23,25 @@ def mainpage(request):
     
     #return render(request, 'my_app/mainpage.html')
     
+#홈
+def home(request):
+    global logined
+    if request.method == 'GET':
+        context = {
+            'logined' : logined
+        }
+        return render(request, 'my_app/home.html', context = context)
+
+#로그아웃 되면서 홈가기
+def logout(request):
+    global logined
+    logined = False
+    if request.method == 'GET':
+        context = {
+            'logined' : logined
+        }
+        return render(request, 'my_app/home.html', context = context)
+
 
 #체험
 def experience(request):
