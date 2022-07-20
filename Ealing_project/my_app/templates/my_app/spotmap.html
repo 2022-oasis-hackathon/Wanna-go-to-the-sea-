@@ -5,7 +5,7 @@
 
 <main>
     {% for p in place %}
-    <div class="inner_wrap2">
+    <div class="inner_wrap2 m">
         <div class="titles">내 주변 추천스팟</div>
         <span class="sub_title">내 위치 : 전라남도 순천시 국가정원길 123</span>
         
@@ -60,11 +60,39 @@
     {% endfor %}
 </main>
 <footer>
-    <div class="footer_top"></div>
-    <div class="footer_bottom"></div>
+    <div class="footer_top">
+        <div class="inner_wrap2">
+            <div>
+                <div>
+                    <ul class="footer_menu">
+                        <li>HOME</li>
+                        <li>산</li>
+                        <li>들</li>
+                        <li>바다</li>
+                        <li>체험하기</li>
+                        <li>스팟지도</li>
+                        <li>ABOUT US</li>
+                    </ul>
+                    <div>
+                        <p>사업자 명: 일링</p>
+                        <p>협찬: 오아시스 해커톤</p>
+                    </div>
+                </div>
+                <ul class="sns">
+                    <li><img src="{% static 'my_app/images/sns1.png' %}" alt=""></li>
+                    <li><img src="{% static 'my_app/images/sns2.png' %}" alt=""></li>
+                    <li><img src="{% static 'my_app/images/sns3.png' %}" alt=""></li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    <div class="footer_bottom">
+
+        <p>Copyright 2021. 일링 Co., Ltd. all rights reserved.</p>
+    </div>
 </footer>
-</div>
-</body>
+
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fddbb98b1c8bf19ba082003e2b48346e"></script>
 <script>
         var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
@@ -85,6 +113,6 @@
         marker.setMap(map);
 </script>
 </html>
-
-
 {% endblock %}
+
+

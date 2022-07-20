@@ -107,7 +107,7 @@ def login(request):
                 'nickname' : username,
                 'logined' : logined,
             }
-            return render(request, 'my_app/mainpage.html', context = context)
+            return render(request, 'my_app/home.html', context = context)
         else:
             return render(request, "my_app/login.html")
 

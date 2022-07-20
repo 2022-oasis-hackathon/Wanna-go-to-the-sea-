@@ -1,16 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form action="" method="post">{% csrf_token %}
-        <input type="text" name="id" id="id">
-        <input type="password" name="pw" id="pw">
-        <button type="submit">로그인</button>
-    </form>
-</body>
-</html>
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+        <main>
+            <div class="login">
+                <div class="login_logo">
+                    <img src="{% static 'my_app/images/login.png' %}" alt="">
+                </div>
+
+                <form action="" method="post">{% csrf_token %}
+                    <span>ID</span>
+                    <div>
+                        <input type="text" id="id" name="id" placeholder="입력">
+                    </div>
+                    <span>PASSWORD</span>
+                    <div>
+                        <input type="password" id="pw" name="pw" placeholder="입력">
+                    </div>
+                    <button type="submit">
+                        <img src="{% static 'my_app/images/login_btn.png' %}" alt="">
+                        <p>로그인</p>
+                    </button>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer_top">
+                <div class="inner_wrap2">
+                    <div>
+                        <div>
+                            <ul class="footer_menu">
+                                <li>HOME</li>
+                                <li>산</li>
+                                <li>들</li>
+                                <li>바다</li>
+                                <li>체험하기</li>
+                                <li>스팟지도</li>
+                                <li>ABOUT US</li>
+                            </ul>
+                            <div>
+                                <p>사업자 명: 일링</p>
+                                <p>협찬: 오아시스 해커톤</p>
+                            </div>
+                        </div>
+                        <ul class="sns">
+                            <li><img src="{% static 'my_app/images/sns1.png' %}" alt=""></li>
+                            <li><img src="{% static 'my_app/images/sns2.png' %}" alt=""></li>
+                            <li><img src="{% static 'my_app/images/sns3.png' %}" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="footer_bottom">
+
+                <p>Copyright 2021. 일링 Co., Ltd. all rights reserved.</p>
+            </div>
+        </footer>
+{% endblock %}
+
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+    function evnet(){
+        $(document)
+        .on("click",".heart" , function(){
+
+            var color = $(this).hasClass("heart_color");
+        
+            if(color){
+                $(this).removeClass("heart_color")
+                $(this).attr("src","/static/my_app/icon/heart_black.png")
+            }else {
+                $(this).addClass("heart_color")
+                $(this).attr("src","/static/my_app/icon/heart_color.png")
+            }
+        })
+    }
+
+    $(function(){
+        evnet();
+    })
+</script>
