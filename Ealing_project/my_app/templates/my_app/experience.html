@@ -37,7 +37,15 @@
                             </div>
                         </div>
                         <p>{{p.content}}</p>
-                        <p>{{p.price}} / 박</p>
+
+                        {% if p.price == '무료'%}
+                        <p>{{p.price}}</p>
+                        {% endif %}
+
+                        {% if p.price != '무료'%}
+                        <p>{{p.price}}원</p>
+                        {% endif %}
+
                     </div>
                 </a>
             </div>
