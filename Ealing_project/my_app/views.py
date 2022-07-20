@@ -2,46 +2,59 @@ from django.shortcuts import render
 from . import models
 from my_app.models import region_detail_page, login_data
 
+logined = False
+print(logined)
 
 # 홈
-def mainpage(request):  
+def mainpage(request):
+    global logined
     if request.method == 'GET':
         products = models.house.objects.all()
         context = {
             'region1' : products[:5],
             'region2' : products[5:10],
             'recommendation1' : products[10:15],
-            'recommendation2' : products[15:20]
+            'recommendation2' : products[15:20],
+            'logined' : logined,
         }
         return render(request, 'my_app/mainpage.html', context = context)
+
+        
     
     #return render(request, 'my_app/mainpage.html')
     
 
 #체험
 def experience(request):
+    global logined
     if request.method == 'GET':
         products = models.house.objects.all()
         context = {
             'recommendation1' : products[10:15],
-            'recommendation2' : products[15:20]
+            'recommendation2' : products[15:20],
+            'logined' : logined,
         }
         return render(request, 'my_app/experience.html', context = context)
 
 
 #스팟
 def spotmap(request):
+    global logined
     if request.method == 'GET':
         place = models.recommend_place.objects.all()
-        context = {'place' : place}
+        context = {
+            'place' : place,
+            'logined' : logined,
+        }
         return render(request, 'my_app/spotmap.html', context = context)
 
 
 
 def detail(request, topic):
+    global logined
     if request.method == 'GET':
             detail = models.region_detail_page.objects.all()
-            context = {'detail' : detail, 'topic' : topic}
+            context = {'detail' : detail, 'topic' : topic, 'logined' : logined,}
             return render(request, 'my_app/detail.html',context = context )
 
 
@@ -52,6 +65,7 @@ def ex_detail(request):
 
 # 로그인
 def login(request):
+    global logined
     if request.method == "POST":
         username = request.POST["id"]
         password = request.POST["pw"]
@@ -64,6 +78,7 @@ def login(request):
 
         if id_check[0].login_id == username and id_check[0].login_password == password:
             print('로그인성공!')
+            logined = True
             products = models.house.objects.all()
             context = {
                 'region1' : products[:5],
@@ -71,6 +86,7 @@ def login(request):
                 'recommendation1' : products[10:15],
                 'recommendation2' : products[15:20],
                 'nickname' : username,
+                'logined' : logined,
             }
             return render(request, 'my_app/mainpage.html', context = context)
         else:
