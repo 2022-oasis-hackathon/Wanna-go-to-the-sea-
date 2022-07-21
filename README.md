@@ -1,11 +1,8 @@
 # 🏝 제3회 오아시스 해커톤 (Oasis Hackathon)🏝
 
-# Project name or Logo
+# 일링
 
 <img width="610" alt="스크린샷 2022-07-03 오후 4 12 31" src="https://user-images.githubusercontent.com/87998104/180105726-3c94db59-3d48-4c0b-90a7-8229b16cce56.png">
-
-
-# 일링
 
 
 ## 프로잭트 소개
