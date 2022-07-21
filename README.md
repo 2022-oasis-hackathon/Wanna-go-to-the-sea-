@@ -1,22 +1,15 @@
 # 🏝 제3회 오아시스 해커톤 (Oasis Hackathon)🏝
 
+# Project name or Logo
 
 <img width="610" alt="스크린샷 2022-07-03 오후 4 12 31" src="https://user-images.githubusercontent.com/87998104/180105726-3c94db59-3d48-4c0b-90a7-8229b16cce56.png">
 
 
-### 본 페이지는 샘플입니다. 아래의 *[샘플 양식에 포함되어 있는 항목은 필수 기재사항]*   입니다.
-해당 내용은 모두 예시이며 설명이 부족하거나 추가하고싶은 부분이 있으면 개발자님이 추가해서 작성하셔도 무관합니다. (동영상, 이미지, 텍스트 적용 전부 자유)
+# 일링
 
-
-# Project name or Logo
-![오아시스로고](https://user-images.githubusercontent.com/64114699/178138225-3a1e530d-f4e6-4c02-a16f-cadb8d164fc6.png)
-
-
-프로젝트명 또는 프로젝트 로고 이미지 **(택1)**
 
 ## 프로잭트 소개
 - 설명 기입
-
 
 ## 기능 설명
  - 설명 기입
@@ -27,13 +20,10 @@
 
 ## 기술 스택 (Technique Used) 
 ### Server(back-end)
- - python, Django, SQLite
- - 기타 라이브러리
+ - python, Django, SQLite3
  
 ### Front-end
- - html, css, javascript, jquery 
- - UI(framework)
- - 기타 라이브러리
+ - html, css, javascript 
 
 
 ## 설치 안내 (Installation Process)
@@ -54,8 +44,10 @@ $ yarn start or npm run start
  샘플 에디터 [https://stackedit.io/app#](https://stackedit.io/app#)
  
 ## 팀 정보 (Team Information)
-- jeong ji hun (wlgns2234@naver.com), Github Id:jihunJeong 
-- lee jun hyeok (ly0609@naver.com), Github Id:ly0609
+- 임정현
+- 정지훈 (wlgns2234@naver.com), Github Id:jihunJeong 
+- 이준혁 (ly0609@naver.com), Github Id:ly0609
+- 김혜지
 
 ## 저작권 및 사용권 정보 (Copyleft / End User License)
  * [MIT](https://github.com/osam2020-WEB/Sample-ProjectName-TeamName/blob/master/license.md)
