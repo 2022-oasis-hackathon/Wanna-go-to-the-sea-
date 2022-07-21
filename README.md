@@ -1,9 +1,7 @@
 # 🏝 제3회 오아시스 해커톤 (Oasis Hackathon)🏝
 
 
-<img width="610" alt="스크린샷 2022-07-03 오후 4 12 31" src="https://user-images.githubusercontent.com/64114699/177029265-0068fb26-2104-474c-96e4-058d5d7152bb.png">
-
-
+<img width="610" alt="스크린샷 2022-07-03 오후 4 12 31" src="https://user-images.githubusercontent.com/87998104/180105726-3c94db59-3d48-4c0b-90a7-8229b16cce56.png">
 
 
 ### 본 페이지는 샘플입니다. 아래의 *[샘플 양식에 포함되어 있는 항목은 필수 기재사항]*   입니다.
